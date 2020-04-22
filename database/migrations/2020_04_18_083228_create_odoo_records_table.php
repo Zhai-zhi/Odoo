@@ -20,9 +20,9 @@ class CreateOdooRecordsTable extends Migration
             $table->String('name');
             $table->decimal('standard_price', 8, 2);
             $table->integer('qty_available');
-            $table->timestamps();
-            //$table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
-            //$table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+            //$table->timestamps();
+           $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+           $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP'));
         });
       
    }

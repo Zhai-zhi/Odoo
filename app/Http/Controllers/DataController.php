@@ -41,8 +41,8 @@ class DataController extends Controller
   
         if($dbCheck->get()->isEmpty()) {
             
-            $pushCount->PushCounter =  0;
-            $pushCount->save();
+            //$pushCount->PushCounter =  0;
+            //$pushCount->save();
 
             $productcollection->transform(function ($item, $key) {
                 unset($item['id']);
@@ -50,6 +50,8 @@ class DataController extends Controller
                 return $item;
             });
             OdooRecord::Insert($productcollection->all());
+            $pushCount->PushCounter =  0;
+            $pushCount->save();
             }
         else 
             {

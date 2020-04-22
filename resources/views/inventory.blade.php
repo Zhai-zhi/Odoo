@@ -17,7 +17,7 @@
 <body>
 <h1>Data Record</h1> <div class="table-responsive">
     <button onclick="window.location.href = '../create';">Update Record</button>
-    <h2>Last Update: {{ $inventoryItems[0] -> updated_at }}</h2>
+    <h2>Latest Update: {{ $inventoryItems[0] -> updated_at }}</h2>
 
 
     <form action="/show" method="POST">
@@ -25,7 +25,7 @@
         <label for="Menu">Select Record:</label>
         <select id="Menu" name="index">
             @foreach($itemCounter as $list)
-                <option value="{{ $list-> PushCounter }}">{{ $list->updated_at }}</option>
+                <option value="{{ $list-> PushCounter }}">{{ $list->ClonedUpdate}}</option>
             @endforeach
         </select>
         <input type="submit" value="Submit">

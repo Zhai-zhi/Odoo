@@ -16,6 +16,7 @@ class CreateCountersTable extends Migration
         Schema::create('counters', function (Blueprint $table) {
             $table->id();
             $table->integer('PushCounter');
+            $table->timestamp('ClonedUpdate');
             $table->timestamps();
             
             //$table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
